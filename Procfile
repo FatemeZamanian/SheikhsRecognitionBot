@@ -1,1 +1,1 @@
-app: python3 sheikhs_bot.py
+app: python3 ./sheikhs_bot.py
