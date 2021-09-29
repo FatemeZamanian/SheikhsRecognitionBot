@@ -3,9 +3,13 @@ import telebot
 from telebot import types
 import numpy as np
 import cv2
+import os
+
+TOKEN = os.environ["Token"]
+bot = telebot.TeleBot(TOKEN)
 
 model=load_model('sheikhs.h5')
-bot=telebot.TeleBot("2046723649:AAFBNwQ-xcElylP_EEGcqm5psdcpY7K23f0")
+
 # btns=telebot.types.ReplyKeyboardMarkup(row_width=1)
 # btn1=telebot.types.KeyboardButton('Start')
 # btns.add(btn1)
