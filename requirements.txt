@@ -1,0 +1,5 @@
+pyTelegramBotAPI
+tensorflow
+numpy
+opencv-python
+
