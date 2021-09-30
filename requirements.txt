@@ -1,4 +1,4 @@
 pyTelegramBotAPI
-tensorflow==2.6.0
+keras
 numpy==1.19.2
 opencv-python
