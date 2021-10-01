@@ -1,4 +1,4 @@
-from keras.models import *
+from keras.models import load_model
 import telebot
 import numpy
 import cv2
@@ -8,7 +8,7 @@ token = os.environ["token"]
 bot = telebot.TeleBot(token)
 
 
-model=keras.models.load_model("sheikhs.h5")
+model=load_model("sheikhs.h5")
 
 @bot.message_handler(commands=['start'])
 def wlc(message):
