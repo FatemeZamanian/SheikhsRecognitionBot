@@ -2,4 +2,3 @@ pyTelegramBotAPI
 keras.models
 opencv-python-headless
 numpy
-os
