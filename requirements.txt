@@ -1,4 +1,4 @@
 pyTelegramBotAPI
-keras
+tensorflow-headless
 opencv-python-headless
 numpy
