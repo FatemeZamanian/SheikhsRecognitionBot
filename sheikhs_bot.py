@@ -5,8 +5,8 @@ import numpy as np
 import cv2
 import os
 
-TOKEN = os.environ["Token"]
-bot = telebot.TeleBot(TOKEN)
+token = os.environ["token"]
+bot = telebot.TeleBot(token)
 
 model=load_model('sheikhs.h5')
 
