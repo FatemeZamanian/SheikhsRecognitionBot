@@ -16,8 +16,8 @@ def wlc(message):
 
 @bot.message_handler(content_types=['photo'])
 def send_photo(message):
-    fileID = message.photo[-1].file_id
-    file_info = bot.get_file(fileID)
+    file_info = bot.get_file(message.photo[-1].file_id)
+    downloaded_file = bot.download_file(file_info.file_path)
     src=file_info.file_path
 #     downloaded_file = bot.download_file(src)
 #     with open(src, 'wb') as new_file:
