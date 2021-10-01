@@ -1,4 +1,4 @@
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import telebot
 from telebot import types
 import numpy as np
