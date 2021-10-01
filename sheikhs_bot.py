@@ -11,8 +11,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def wlc(message):
-    bot.send_message(message.chat.id,'Hi 👋🏻 please send me a picture👀',
-     )
+    bot.send_message(message.chat.id,'Hi 👋🏻 please send me a picture👀')
 
 @bot.message_handler(content_types=['photo'])
 def send_photo(message):
