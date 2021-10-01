@@ -1,4 +1,4 @@
-# from keras.models import load_model
+from keras.models import *
 import telebot
 import numpy
 import cv2
