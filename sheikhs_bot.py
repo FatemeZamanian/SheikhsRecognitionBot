@@ -1,7 +1,7 @@
 from keras.models import load_model
 import telebot
 from telebot import types
-# import numpy as np
+import numpy
 import cv2
 import os
 
