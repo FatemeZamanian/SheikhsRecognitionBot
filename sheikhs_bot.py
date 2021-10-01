@@ -7,7 +7,7 @@ import os
 token = os.environ["token"]
 bot = telebot.TeleBot(token)
 
-model=load_model('./sheikhs.h5')
+# model=load_model('./sheikhs.h5')
 
 @bot.message_handler(commands=['start'])
 def wlc(message):
@@ -16,12 +16,13 @@ def wlc(message):
 
 @bot.message_handler(content_types=['photo'])
 def send_photo(message):
-    file_info = bot.get_file(message.photo[-1].file_id)
-    downloaded_file = bot.download_file(file_info.file_path)
-    src = os.path.join('input', file_info.file_path)
+    fileID = message.photo[-1].file_id
+    file_info = bot.get_file(fileID)
+    src=file_info.file_path
+    downloaded_file = bot.download_file(src)
     with open(src, 'wb') as new_file:
         new_file.write(downloaded_file)
-
+        
 #     img_org = cv2.imread(src)
 #     img_RGB = cv2.cvtColor(img_org, cv2.COLOR_BGR2RGB)
 #     img_resize = cv2.resize(img_RGB, (224, 224))
