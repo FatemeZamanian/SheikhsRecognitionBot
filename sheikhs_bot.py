@@ -1,6 +1,6 @@
-from keras.models import load_model
+# from keras.models import load_model
 import telebot
-# import numpy
+import numpy
 import cv2
 import os
 
