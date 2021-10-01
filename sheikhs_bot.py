@@ -13,13 +13,13 @@ bot = telebot.TeleBot(token)
 def wlc(message):
     bot.send_message(message.chat.id,'Hi 👋🏻 please send me a picture👀')
 
-@bot.message_handler(content_types=['photo'])
-def send_photo(message):
-    file_info = bot.get_file(message.photo[-1].file_id)
-    downloaded_file = bot.download_file(file_info.file_path)
-    image_path = os.path.join('input', file_info.file_path)
-    with open(image_path, 'wb') as new_file:
-        new_file.write(downloaded_file)
+# @bot.message_handler(content_types=['photo'])
+# def send_photo(message):
+#     file_info = bot.get_file(message.photo[-1].file_id)
+#     downloaded_file = bot.download_file(file_info.file_path)
+#     image_path = os.path.join('input', file_info.file_path)
+#     with open(image_path, 'wb') as new_file:
+#         new_file.write(downloaded_file)
         
 #     img_org = cv2.imread(src)
 #     img_RGB = cv2.cvtColor(img_org, cv2.COLOR_BGR2RGB)
