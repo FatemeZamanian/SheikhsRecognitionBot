@@ -19,9 +19,9 @@ def send_photo(message):
     file_info = bot.get_file(message.photo[-1].file_id)
     downloaded_file = bot.download_file(file_info.file_path)
     src=file_info.file_path
-#     downloaded_file = bot.download_file(src)
-#     with open(src, 'wb') as new_file:
-#         new_file.write(downloaded_file)
+    downloaded_file = bot.download_file(src)
+    with open(src, 'wb') as new_file:
+        new_file.write(downloaded_file)
         
 #     img_org = cv2.imread(src)
 #     img_RGB = cv2.cvtColor(img_org, cv2.COLOR_BGR2RGB)
