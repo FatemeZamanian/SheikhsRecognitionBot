@@ -1,7 +1,7 @@
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import telebot
 from telebot import types
-import numpy as np
+# import numpy as np
 import cv2
 import os
 
@@ -32,11 +32,11 @@ def photo(message):
     img_RGB = cv2.cvtColor(img_org, cv2.COLOR_BGR2RGB)
     img_resize = cv2.resize(img_RGB, (224, 224))
     
-    img_numpy = np.array(img_resize)
+    img_numpy = numpy.array(img_resize)
     img = img_numpy / 255.0
     final = img.reshape(1, 224, 224, 3)
 
-    y_pred = np.argmax(model.predict(final))
+    y_pred = numpy.argmax(model.predict(final))
 
     if y_pred == 0:
         bot.reply_to(message,'normal person')
