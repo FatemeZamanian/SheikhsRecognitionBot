@@ -7,7 +7,7 @@ import os
 token = os.environ["token"]
 bot = telebot.TeleBot(token)
 
-model=load_model('sheikhs.h5')
+model=load_model('./sheikhs.h5')
 
 @bot.message_handler(commands=['start'])
 def wlc(message):
