@@ -1,4 +1,4 @@
-from keras.models import load_model
+
 import telebot
 import numpy
 import cv2
@@ -7,7 +7,7 @@ import os
 token = os.environ["token"]
 bot = telebot.TeleBot(token)
 
-
+from keras.models import load_model
 model=load_model('./sheikhs.h5',custom_objects={'accuracy': accuracy})
 
 @bot.message_handler(commands=['start'])
