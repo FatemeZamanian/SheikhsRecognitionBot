@@ -8,7 +8,7 @@ token = os.environ["token"]
 bot = telebot.TeleBot(token)
 
 
-model=load_model("sheikhs.h5",custom_objects={'accuracy': accuracy})
+model=load_model('./sheikhs.h5',custom_objects={'accuracy': accuracy})
 
 @bot.message_handler(commands=['start'])
 def wlc(message):
