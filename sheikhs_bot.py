@@ -3,11 +3,12 @@ import telebot
 import numpy
 import cv2
 import os
+from tensorflow.keras.models import load_model
 
 token = os.environ["token"]
 bot = telebot.TeleBot(token)
 
-from keras.models import load_model
+
 model=load_model('sheikhs.h5')
 
 @bot.message_handler(commands=['start'])

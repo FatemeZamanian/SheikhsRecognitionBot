@@ -1,3 +1,3 @@
 pyTelegramBotAPI
 opencv-python-headless
-keras
+tensorflow-cpu
