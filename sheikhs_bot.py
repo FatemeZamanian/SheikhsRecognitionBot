@@ -32,11 +32,11 @@ def send_photo(message):
     final = img.reshape(1, 224, 224, 3)
 
     y_pred = numpy.argmax(model.predict(final))
-
+    print(y_pred)
     if y_pred == 0:
         bot.reply_to(message,'normal person')
       
-    else:
+    elif y_pred==1:
         bot.reply_to(message,'sheikh')
       
 
