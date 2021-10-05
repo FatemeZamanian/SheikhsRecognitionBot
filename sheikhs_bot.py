@@ -23,7 +23,7 @@ def send_photo(message):
     with open(image_path, 'wb') as new_file:
         new_file.write(downloaded_file)
         
-    img_org = cv2.imread(downloaded_file)
+    img_org = cv2.imread(image_path)
     img_RGB = cv2.cvtColor(img_org, cv2.COLOR_BGR2RGB)
     img_resize = cv2.resize(img_RGB, (224, 224))
     
